@@ -14,7 +14,7 @@ router.get("/api/workouts", (req, res) => {
 		});
 });
 
-// ADD exercise
+// ADD exercise to a Workout Plan
 
 router.put("/api/workouts/:id", ({ params, body }, res) => {
   console.log("p", params, body);
@@ -32,7 +32,7 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
     });
 });
 
-// CREATE workout
+// CREATE new workout
 
 router.post("/api/workouts", ({ body }, res) => {
   Workout.create(body)
@@ -44,7 +44,7 @@ router.post("/api/workouts", ({ body }, res) => {
     });
 });
 
-// GET workout in range
+// GET workout in 7 day range
 
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
