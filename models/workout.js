@@ -42,9 +42,6 @@ const WorkoutSchema = new Schema({
 });
 
 
-
-
-
 // Create mongoose model 'workout' and apply workout schema to that model
 const Workout = mongoose.model("workout", WorkoutSchema);
 
