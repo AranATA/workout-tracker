@@ -1,15 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+// initialize server
 const app = express();
+
+// set up port
 const PORT = process.env.PORT || 3000;
 
+// make sure we can use JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// make public folder static 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout-tracker", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
 
 // routes
 app.use(require("./routes/api-routes.js"));
