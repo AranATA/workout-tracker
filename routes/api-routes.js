@@ -23,7 +23,7 @@ router.get("/api/workouts", (req, res) => {
 // ADD exercise to a Workout Plan
 
 router.put("/api/workouts/:id", ({ body, params }, res) => {
-  console.log("p", body, params);
+  console.log("check!", body, params);
   
   Workout.findByIdAndUpdate(
     { _id: params.id },
@@ -59,7 +59,7 @@ router.get("/api/workouts/range", (req, res) => {
       totalDuration:{$sum: "$exercises.duration"}
     }
   }])
-    .limit(7)
+    .sort({_id:-1}).limit(7)
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
