@@ -3,7 +3,7 @@
 ## **workout tracker**<br>
 <br>
 
-https://damp-plains-35978.herokuapp.com/](https://damp-plains-35978.herokuapp.com/)<br>
+[https://damp-plains-35978.herokuapp.com/](https://damp-plains-35978.herokuapp.com/)<br>
 <br>
 
 ## description
