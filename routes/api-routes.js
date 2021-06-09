@@ -1,6 +1,6 @@
 const router = require("express").Router();
 // Import workout model
-const Workout  = require("../models/Workout");
+const Workout  = require("../models/Workout.js");
 
 // GET last workout
 

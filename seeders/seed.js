@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const db = require('../models/Workout');
-// require("dotenv").config();
+const db = require("../models/Workout.js");
 
-mongoose.connect('mongodb://localhost/workout', {
+mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false,
+  // useCreateIndex: true,
   useUnifiedTopology: true,
 });
 
